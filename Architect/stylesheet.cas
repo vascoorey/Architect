@@ -1,0 +1,23 @@
+$color1 = #ff0000
+
+UIView.main {
+  background-color: #e1e1e1;
+}
+
+ARCHView.red-view {
+  arch_corner-radius: 10
+  background-color: $color1
+  arch_top-offset-constraint: "10 main top"
+  arch_bottom-offset-constraint: "-10 main bottom"
+  arch_left-offset-constraint: "10 main left"
+  arch_right-offset-constraint: "-100 main right"
+}
+
+ARCHView.green-view {
+  arch_corner-radius: 10
+  background-color: #12345
+  arch_top-offset-constraint: "10 main top"
+  arch_bottom-offset-constraint: "-10 main bottom"
+  arch_left-offset-constraint: "10 red right"
+  arch_right-offset-constraint: "-10 main right"
+}

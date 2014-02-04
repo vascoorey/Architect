@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import <Classy/Classy.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+  NSString *absoluteFilePath = @"/Users/vasco/Developer/Architect/Architect/stylesheet.cas";
+  [CASStyler defaultStyler].watchFilePath = absoluteFilePath;
     return YES;
 }
 							
