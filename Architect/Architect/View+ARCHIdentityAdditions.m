@@ -29,11 +29,6 @@
 
 - (UIView *)arch_siblingWithIdentifier:(NSString *)identifier
 {
-//  if(self.arch_isParentView)
-//  {
-//    // If we're the parent view then return ourselves only if we have the correct identifier. Otherwise return nil.
-//    return [self.arch_identifier isEqualToString:identifier] ? self : nil;
-//  }
   for(UIView *view in self.subviews)
   {
     if([view.arch_identifier isEqualToString:identifier])

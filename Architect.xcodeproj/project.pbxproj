@@ -10,6 +10,7 @@
 		5C18F454906F4A438D98FCBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6B3039792045DEA3D1B5CD /* libPods.a */; };
 		6DE635936AE64AF0B4117B78 /* libPods-Architect Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6E7AD8EA6D4C01AE77A41F /* libPods-Architect Tests.a */; };
 		BC4D002B18A1736300FD5E9B /* View+ARCHLayerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4D002A18A1736300FD5E9B /* View+ARCHLayerAdditions.m */; };
+		BC4D002E18A2A4A500FD5E9B /* View+ARCHSizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4D002D18A2A4A500FD5E9B /* View+ARCHSizeAdditions.m */; };
 		BC54CB37189FDE3600DA5E57 /* View+ARCHIdentityAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54CB36189FDE3600DA5E57 /* View+ARCHIdentityAdditions.m */; };
 		BC54CB3A189FDE6100DA5E57 /* View+ARCHOffsetAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54CB39189FDE6100DA5E57 /* View+ARCHOffsetAdditions.m */; };
 		BC54CB3D189FF90800DA5E57 /* UIViewController+ARCHConstraintAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54CB3C189FF90800DA5E57 /* UIViewController+ARCHConstraintAdditions.m */; };
@@ -47,6 +48,8 @@
 		A18890931CD34B87B9D578BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BC4D002918A1736300FD5E9B /* View+ARCHLayerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+ARCHLayerAdditions.h"; path = "Architect/View+ARCHLayerAdditions.h"; sourceTree = "<group>"; };
 		BC4D002A18A1736300FD5E9B /* View+ARCHLayerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "View+ARCHLayerAdditions.m"; path = "Architect/View+ARCHLayerAdditions.m"; sourceTree = "<group>"; };
+		BC4D002C18A2A4A500FD5E9B /* View+ARCHSizeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+ARCHSizeAdditions.h"; path = "Architect/View+ARCHSizeAdditions.h"; sourceTree = "<group>"; };
+		BC4D002D18A2A4A500FD5E9B /* View+ARCHSizeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "View+ARCHSizeAdditions.m"; path = "Architect/View+ARCHSizeAdditions.m"; sourceTree = "<group>"; };
 		BC54CB35189FDE3600DA5E57 /* View+ARCHIdentityAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+ARCHIdentityAdditions.h"; path = "Architect/View+ARCHIdentityAdditions.h"; sourceTree = "<group>"; };
 		BC54CB36189FDE3600DA5E57 /* View+ARCHIdentityAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "View+ARCHIdentityAdditions.m"; path = "Architect/View+ARCHIdentityAdditions.m"; sourceTree = "<group>"; };
 		BC54CB38189FDE6100DA5E57 /* View+ARCHOffsetAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "View+ARCHOffsetAdditions.h"; path = "Architect/View+ARCHOffsetAdditions.h"; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				BC54CB39189FDE6100DA5E57 /* View+ARCHOffsetAdditions.m */,
 				BC4D002918A1736300FD5E9B /* View+ARCHLayerAdditions.h */,
 				BC4D002A18A1736300FD5E9B /* View+ARCHLayerAdditions.m */,
+				BC4D002C18A2A4A500FD5E9B /* View+ARCHSizeAdditions.h */,
+				BC4D002D18A2A4A500FD5E9B /* View+ARCHSizeAdditions.m */,
 				BC726EEB18A041F100375FDA /* ARCHView.h */,
 				BC726EEC18A041F100375FDA /* ARCHView.m */,
 				BC54CB3B189FF90800DA5E57 /* UIViewController+ARCHConstraintAdditions.h */,
@@ -395,6 +400,7 @@
 				BC4D002B18A1736300FD5E9B /* View+ARCHLayerAdditions.m in Sources */,
 				BC54CB3D189FF90800DA5E57 /* UIViewController+ARCHConstraintAdditions.m in Sources */,
 				BC726EED18A041F100375FDA /* ARCHView.m in Sources */,
+				BC4D002E18A2A4A500FD5E9B /* View+ARCHSizeAdditions.m in Sources */,
 				BC54CB3A189FDE6100DA5E57 /* View+ARCHOffsetAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

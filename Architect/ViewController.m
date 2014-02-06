@@ -29,14 +29,19 @@
   self.view.cas_styleClass = @"main";
   
   self.redView = [[ARCHView alloc] init];
-  self.redView.cas_styleClass = @"red-view";
+  self.redView.cas_styleClass = @"red";
   self.redView.arch_identifier = @"red";
   [self.view addSubview:self.redView];
   
   self.greenView = [[ARCHView alloc] init];
-  self.greenView.cas_styleClass = @"green-view";
+  self.greenView.cas_styleClass = @"green";
   self.greenView.arch_identifier = @"green";
   [self.view addSubview:self.greenView];
+  
+  UIView *otherView = [[ARCHView alloc] init];
+  otherView.cas_styleClass = @"other";
+  otherView.arch_identifier = @"other";
+  [self.view addSubview:otherView];
 }
 
 @end

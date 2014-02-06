@@ -257,32 +257,35 @@
   objc_setAssociatedObject(self, @selector(arch_topOffsetConstraint), arch_topOffsetConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   // Parse the constraint string
   NSArray *components = [arch_topOffsetConstraint componentsSeparatedByString:@" "];
-  if(components.count != 3)
+  if(components.count == 3)
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Constraint string is invalid" userInfo:nil] raise];
-  }
-  self.arch_topOffset = [components[0] floatValue];
-  self.arch_topOffsetViewIdentifier = components[1];
-  NSString *side = components[2];
-  if([side isEqualToString:@"top"])
-  {
-    self.arch_topOffsetSide = ARCHSideTop;
-  }
-  else if([side isEqualToString:@"bottom"])
-  {
-    self.arch_topOffsetSide = ARCHSideBottom;
-  }
-  else if([side isEqualToString:@"left"])
-  {
-    self.arch_topOffsetSide = ARCHSideLeft;
-  }
-  else if([side isEqualToString:@"right"])
-  {
-    self.arch_topOffsetSide = ARCHSideRight;
+    self.arch_topOffset = [components[0] floatValue];
+    self.arch_topOffsetViewIdentifier = components[1];
+    NSString *side = components[2];
+    if([side isEqualToString:@"top"])
+    {
+      self.arch_topOffsetSide = ARCHSideTop;
+    }
+    else if([side isEqualToString:@"bottom"])
+    {
+      self.arch_topOffsetSide = ARCHSideBottom;
+    }
+    else if([side isEqualToString:@"left"])
+    {
+      self.arch_topOffsetSide = ARCHSideLeft;
+    }
+    else if([side isEqualToString:@"right"])
+    {
+      self.arch_topOffsetSide = ARCHSideRight;
+    }
+    else
+    {
+      self.arch_topOffsetSide = ARCHSideInvalid;
+    }
   }
   else
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Invalid side set to constraint" userInfo:nil] raise];
+    self.arch_topOffsetSide = ARCHSideInvalid;
   }
   [self setNeedsUpdateConstraints];
 }
@@ -297,32 +300,35 @@
   objc_setAssociatedObject(self, @selector(arch_bottomOffsetConstraint), arch_bottomOffsetConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   // Parse the constraint string
   NSArray *components = [arch_bottomOffsetConstraint componentsSeparatedByString:@" "];
-  if(components.count != 3)
+  if(components.count == 3)
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Constraint string is invalid" userInfo:nil] raise];
-  }
-  self.arch_bottomOffset = [components[0] floatValue];
-  self.arch_bottomOffsetViewIdentifier = components[1];
-  NSString *side = components[2];
-  if([side isEqualToString:@"top"])
-  {
-    self.arch_bottomOffsetSide = ARCHSideTop;
-  }
-  else if([side isEqualToString:@"bottom"])
-  {
-    self.arch_bottomOffsetSide = ARCHSideBottom;
-  }
-  else if([side isEqualToString:@"left"])
-  {
-    self.arch_bottomOffsetSide = ARCHSideLeft;
-  }
-  else if([side isEqualToString:@"right"])
-  {
-    self.arch_bottomOffsetSide = ARCHSideRight;
+    self.arch_bottomOffset = [components[0] floatValue];
+    self.arch_bottomOffsetViewIdentifier = components[1];
+    NSString *side = components[2];
+    if([side isEqualToString:@"top"])
+    {
+      self.arch_bottomOffsetSide = ARCHSideTop;
+    }
+    else if([side isEqualToString:@"bottom"])
+    {
+      self.arch_bottomOffsetSide = ARCHSideBottom;
+    }
+    else if([side isEqualToString:@"left"])
+    {
+      self.arch_bottomOffsetSide = ARCHSideLeft;
+    }
+    else if([side isEqualToString:@"right"])
+    {
+      self.arch_bottomOffsetSide = ARCHSideRight;
+    }
+    else
+    {
+      self.arch_bottomOffsetSide = ARCHSideInvalid;
+    }
   }
   else
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Invalid side set to constraint" userInfo:nil] raise];
+    self.arch_bottomOffsetSide = ARCHSideInvalid;
   }
   [self setNeedsUpdateConstraints];
 }
@@ -337,32 +343,35 @@
   objc_setAssociatedObject(self, @selector(arch_leftOffsetConstraint), arch_leftOffsetConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   // Parse the constraint string
   NSArray *components = [arch_leftOffsetConstraint componentsSeparatedByString:@" "];
-  if(components.count != 3)
+  if(components.count == 3)
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Constraint string is invalid" userInfo:nil] raise];
-  }
-  self.arch_leftOffset = [components[0] floatValue];
-  self.arch_leftOffsetViewIdentifier = components[1];
-  NSString *side = components[2];
-  if([side isEqualToString:@"top"])
-  {
-    self.arch_leftOffsetSide = ARCHSideTop;
-  }
-  else if([side isEqualToString:@"bottom"])
-  {
-    self.arch_leftOffsetSide = ARCHSideBottom;
-  }
-  else if([side isEqualToString:@"left"])
-  {
-    self.arch_leftOffsetSide = ARCHSideLeft;
-  }
-  else if([side isEqualToString:@"right"])
-  {
-    self.arch_leftOffsetSide = ARCHSideRight;
+    self.arch_leftOffset = [components[0] floatValue];
+    self.arch_leftOffsetViewIdentifier = components[1];
+    NSString *side = components[2];
+    if([side isEqualToString:@"top"])
+    {
+      self.arch_leftOffsetSide = ARCHSideTop;
+    }
+    else if([side isEqualToString:@"bottom"])
+    {
+      self.arch_leftOffsetSide = ARCHSideBottom;
+    }
+    else if([side isEqualToString:@"left"])
+    {
+      self.arch_leftOffsetSide = ARCHSideLeft;
+    }
+    else if([side isEqualToString:@"right"])
+    {
+      self.arch_leftOffsetSide = ARCHSideRight;
+    }
+    else
+    {
+      self.arch_leftOffsetSide = ARCHSideInvalid;
+    }
   }
   else
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Invalid side set to constraint" userInfo:nil] raise];
+    self.arch_leftOffsetSide = ARCHSideInvalid;
   }
   [self setNeedsUpdateConstraints];
 }
@@ -377,32 +386,35 @@
   objc_setAssociatedObject(self, @selector(arch_rightOffsetConstraint), arch_rightOffsetConstraint, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
   // Parse the constraint string
   NSArray *components = [arch_rightOffsetConstraint componentsSeparatedByString:@" "];
-  if(components.count != 3)
+  if(components.count == 3)
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Constraint string is invalid" userInfo:nil] raise];
-  }
-  self.arch_rightOffset = [components[0] floatValue];
-  self.arch_rightOffsetViewIdentifier = components[1];
-  NSString *side = components[2];
-  if([side isEqualToString:@"top"])
-  {
-    self.arch_rightOffsetSide = ARCHSideTop;
-  }
-  else if([side isEqualToString:@"bottom"])
-  {
-    self.arch_rightOffsetSide = ARCHSideBottom;
-  }
-  else if([side isEqualToString:@"left"])
-  {
-    self.arch_rightOffsetSide = ARCHSideLeft;
-  }
-  else if([side isEqualToString:@"right"])
-  {
-    self.arch_rightOffsetSide = ARCHSideRight;
+    self.arch_rightOffset = [components[0] floatValue];
+    self.arch_rightOffsetViewIdentifier = components[1];
+    NSString *side = components[2];
+    if([side isEqualToString:@"top"])
+    {
+      self.arch_rightOffsetSide = ARCHSideTop;
+    }
+    else if([side isEqualToString:@"bottom"])
+    {
+      self.arch_rightOffsetSide = ARCHSideBottom;
+    }
+    else if([side isEqualToString:@"left"])
+    {
+      self.arch_rightOffsetSide = ARCHSideLeft;
+    }
+    else if([side isEqualToString:@"right"])
+    {
+      self.arch_rightOffsetSide = ARCHSideRight;
+    }
+    else
+    {
+      self.arch_rightOffsetSide = ARCHSideInvalid;
+    }
   }
   else
   {
-    [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Invalid side set to constraint" userInfo:nil] raise];
+    self.arch_rightOffsetSide = ARCHSideInvalid;
   }
   [self setNeedsUpdateConstraints];
 }

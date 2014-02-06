@@ -12,6 +12,7 @@
 #import "ARCHUtilities.h"
 #import "View+ARCHIdentityAdditions.h"
 #import "View+ARCHOffsetAdditions.h"
+#import "View+ARCHSizeAdditions.h"
 #import "View+ARCHLayerAdditions.h"
 #import "UIViewController+ARCHConstraintAdditions.h"
 #import "ARCHView.h"

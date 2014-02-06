@@ -23,7 +23,9 @@
 {
   [self.arch_constraints makeObjectsPerformSelector:@selector(uninstall)];
   self.arch_constraints = NSMutableArray.array;
-  if(self.arch_topOffsetView)
+  
+  // Offset
+  if(self.arch_topOffsetView && self.arch_topOffsetSide != ARCHSideInvalid)
   {
     [self.arch_constraints addObjectsFromArray:[self mas_makeConstraints:^(MASConstraintMaker *make) {
       id top;
@@ -46,7 +48,7 @@
       make.top.equalTo(top).with.offset(self.arch_topOffset);
     }]];
   }
-  if(self.arch_bottomOffsetView)
+  if(self.arch_bottomOffsetView && self.arch_bottomOffsetSide != ARCHSideInvalid)
   {
     [self.arch_constraints addObjectsFromArray:[self mas_makeConstraints:^(MASConstraintMaker *make) {
       id bottom;
@@ -69,7 +71,7 @@
       make.bottom.equalTo(bottom).with.offset(self.arch_bottomOffset);
     }]];
   }
-  if(self.arch_leftOffsetView)
+  if(self.arch_leftOffsetView && self.arch_leftOffsetSide != ARCHSideInvalid)
   {
     [self.arch_constraints addObjectsFromArray:[self mas_makeConstraints:^(MASConstraintMaker *make) {
       id left;
@@ -92,7 +94,7 @@
       make.left.equalTo(left).with.offset(self.arch_leftOffset);
     }]];
   }
-  if(self.arch_rightOffsetView)
+  if(self.arch_rightOffsetView && self.arch_rightOffsetSide != ARCHSideInvalid)
   {
     [self.arch_constraints addObjectsFromArray:[self mas_makeConstraints:^(MASConstraintMaker *make) {
       id right;
@@ -115,6 +117,53 @@
       make.right.equalTo(right).with.offset(self.arch_rightOffset);
     }]];
   }
+  
+  // Size
+  if(self.arch_height || (self.arch_heightView && self.arch_heightSide != ARCHSizeSideInvalid))
+  {
+    [self.arch_constraints addObjectsFromArray:[self mas_makeConstraints:^(MASConstraintMaker *make) {
+      if(self.arch_height)
+      {
+        make.height.equalTo(@(self.arch_height));
+      }
+      else
+      {
+        id side;
+        if(self.arch_heightSide == ARCHSizeSideHeight)
+        {
+          side = self.arch_heightView.mas_height;
+        }
+        else
+        {
+          side = self.arch_heightView.mas_width;
+        }
+        make.height.equalTo(side).multipliedBy(self.arch_heightMultiplier);
+      }
+    }]];
+  }
+  if(self.arch_width || (self.arch_widthView && self.arch_widthSide != ARCHSizeSideInvalid))
+  {
+    [self.arch_constraints addObjectsFromArray:[self mas_makeConstraints:^(MASConstraintMaker *make) {
+      if(self.arch_width)
+      {
+        make.width.equalTo(@(self.arch_width));
+      }
+      else
+      {
+        id side;
+        if(self.arch_widthSide == ARCHSizeSideHeight)
+        {
+          side = self.arch_widthView.mas_height;
+        }
+        else
+        {
+          side = self.arch_widthView.mas_width;
+        }
+        make.width.equalTo(side).multipliedBy(self.arch_widthMultiplier);
+      }
+    }]];
+  }
+  
   NSLog(@"%@", self.arch_constraints);
   [super updateConstraints];
 }

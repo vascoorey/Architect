@@ -4,20 +4,30 @@ UIView.main {
   background-color: #e1e1e1;
 }
 
-ARCHView.red-view {
-  arch_corner-radius: 10
+ARCHView.red {
+  arch_corner-radius: 100
   background-color: $color1
-  arch_top-offset-constraint: "10 main top"
-  arch_bottom-offset-constraint: "-10 main bottom"
-  arch_left-offset-constraint: "10 main left"
-  arch_right-offset-constraint: "-100 main right"
+  arch_top-offset-constraint: "20 main top"
+  arch_bottom-offset-constraint: "-20 main bottom"
+  arch_left-offset-constraint: "20 main left"
+  arch_right-offset-constraint: "-20 main right"
 }
 
-ARCHView.green-view {
-  arch_corner-radius: 10
-  background-color: #12345
+ARCHView.green {
+  arch_corner-radius: 16
+  background-color: #00ff00
   arch_top-offset-constraint: "10 main top"
-  arch_bottom-offset-constraint: "-10 main bottom"
-  arch_left-offset-constraint: "10 red right"
+  arch_bottom-offset-constraint: "-10 red bottom"
+  arch_left-offset-constraint: "-50 red right"
   arch_right-offset-constraint: "-10 main right"
+  arch_width: "red .75"
+}
+
+ARCHView.other {
+  background-color: #face00
+  arch_corner-radius: 25.
+  arch_top-offset-constraint:"20 main top"
+  arch_left-offset-constraint: "40 red left"
+  arch_width-constraint: "green width 1"
+  arch_height-constraint: "red height 1"
 }
