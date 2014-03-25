@@ -33,3 +33,14 @@ Architect uses the following libraries:
 * Masonry
 * Classy
 * Underscore.m
+
+Features Currently Working
+==========================
+
+* Size
+* Offsets
+
+TODO
+====
+
+Architect is still quite a way away from any sort of stable release.
