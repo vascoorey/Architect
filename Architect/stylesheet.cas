@@ -14,7 +14,9 @@ ARCHView.red {
 }
 
 ARCHView.green {
-  arch_corner-radius: 16
+  layer: @{
+    corner-radius: 100
+  }
   background-color: #00ff00
   arch_top-offset-constraint: "10 main top"
   arch_bottom-offset-constraint: "-10 red bottom"
@@ -24,10 +26,10 @@ ARCHView.green {
 }
 
 ARCHView.other {
-  background-color: #face00
+  background-color: #001155
   arch_corner-radius: 25.
   arch_top-offset-constraint:"20 main top"
-  arch_left-offset-constraint: "40 red left"
+  arch_left-offset-constraint: "50 red left"
   arch_width-constraint: "green width 1"
-  arch_height-constraint: "red height 1"
+  arch_height-constraint: "red height"
 }
