@@ -21,8 +21,8 @@ AViewClass  {
 }
 
 aView {
-  size 200, 200
-  top anotherView.bottom 20
+  size "200 200"
+  arch_top "anotherView bottom 20"
 }
 ```
 
@@ -44,3 +44,8 @@ TODO
 ====
 
 Architect is still quite a way away from any sort of stable release.
+
+* Finalize constraint rules
+* Add support for more types of layout constraints
+* Documentation
+* Examples
